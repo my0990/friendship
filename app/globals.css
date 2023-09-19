@@ -1,0 +1,383 @@
+:root {
+  color-scheme: light only;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-decoration-color: #eb494c;
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    filter: brightness(100%);
+  }
+  body {
+    /* background-color: #FC7174; */
+    /* filter: brightness(100%); */
+  }
+  .class:hover {
+    background-color: #ffa9a9;
+  }
+  .class {
+    background-color: white;
+    box-shadow: 1px 4px 0 rgb(0,0,0,0.5);
+  }
+  .class:hover {
+    background-color: #ffa9a9;
+  }
+  .filebox .upload-name {
+    border: 1px solid #dddddd;
+
+    color: #999999;
+  }
+  .left {
+    background-color: #FC7174;
+  }
+  
+  .right {
+    background-color: #FC7174;
+  }
+}
+
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background-color: #FC7174;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper {
+  height: 100vh;
+
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.class {
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+  box-shadow: 1px 4px 0 rgb(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  border: none;
+}
+
+.class:active {
+  box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+  position: relative;
+  top: 2px;
+}
+
+.class:hover {
+  background-color: #ffa9a9;
+}
+
+.inputWrapper {
+  display: flex;
+  max-width: 500px;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  padding-top: 3rem;
+}
+
+.nameInput {
+  background-color: white;
+  width: 60%;
+  max-width: 200px;
+  border: none;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid white;
+  box-shadow: 1px 4px 0 rgb(0,0,0,0.5);
+  font-size: 1.2rem;
+  font-weight: 400;
+  outline: none;
+}
+
+.left {
+  border: none;
+  background-color: #FC7174;
+  color: white;
+  top: 50%;
+  left: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.right {
+  border: none;
+  background-color: #FC7174;
+  top: 50%;
+  right: 0;
+  position: absolute;
+  cursor: pointer; 
+}
+
+.nameInput::placeholder {
+  color: black;
+  opacity: 50%;
+}
+/* .preview {
+  width: 200px;
+  height: 200px;
+}
+
+.imgInput {
+  width: 200px;
+  height: 200px;
+} */
+
+.filebox {
+  margin-bottom: 1rem;
+}
+.filebox .upload-name {
+  display: inline-block;
+  height: 40px;
+  padding: 0 10px;
+  vertical-align: middle;
+  border: 1px solid #dddddd;
+  width: 40%;
+  color: #999999;
+}
+
+.filebox label {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #999999;
+  cursor: pointer;
+  height: 40px;
+  margin-left: 10px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+}
+.filebox input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+.left:hover {
+  scale: 1.1;
+  transition: all 0.2s;
+}
+
+.right:hover {
+  scale: 1.1;
+  transition: all 0.2s;
+}
+
+@media all and (min-width: 1024px) {
+  .inputWrapper {
+    justify-content: center;
+    max-width: 1024px;
+  }
+  .fadeout {
+    display: none;
+  }
+  .inputWrapper{
+    padding-top: 0;
+  }
+
+}
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) {
+  .wrapper {
+    width: 768px;
+    
+  }
+} 
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+@media all and (max-width:767px) {
+
+  .wrapper {
+    width: 100%;
+  }
+  .btn {
+    width: 20%;
+  }
+  .left{
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+
+}
+
+.svgWrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.svg {
+  animation: 2s linear infinite svg-animation;
+  max-width: 100px;
+  position: absolute;
+
+}
+.fadeout {
+  transition: all 1s ease-out;
+  opacity: 0;
+}
+
+.slidInfo {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.test {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: gray;
+  opacity: 70%;
+}
+@keyframes svg-animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg)
+  }
+}
+
+
+circle {
+  animation: 1.4s ease-in-out infinite both circle-animation;
+  display: block;
+  fill: transparent;
+  stroke: #2f3d4c;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 280;
+  stroke-width: 10px;
+  transform-origin: 50% 50%;
+}
+
+
+@keyframes circle-animation {
+  0%,
+  25% {
+    stroke-dashoffset: 280;
+    transform: rotate(0);
+  }
+  
+  50%,
+  75% {
+    stroke-dashoffset: 75;
+    transform: rotate(45deg);
+  }
+  
+  100% {
+    stroke-dashoffset: 280;
+    transform: rotate(360deg);
+  }
+}
+
+
+.hand-x{
+  fill: #fff;
+	stroke: #000;
+	stroke-width: 3px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+  animation: swipe-x 1.25s ease-in-out backwards;
+	animation-iteration-count:infinite;
+}
+
+.arrow-left {
+  fill: transparent;
+	stroke: #000;
+	stroke-width: 3px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.arrow-right {
+  fill: transparent;
+	stroke: #000;
+	stroke-width: 3px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+.fingerWrapper * {
+  transform-origin: 50% 50%;
+	perspective: 100px;
+}
+
+
+@keyframes swipe-x {
+	0% {
+		transform: translateX(0px);
+	}
+	25% {
+		transform: translateX(50px) rotateZ(10deg);
+	}
+	50% {
+		transform: translateX(0px);
+	}
+	75% {
+		transform: translateX(-50px) rotateZ(-10deg);
+	}
+}
